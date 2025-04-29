@@ -1,0 +1,725 @@
+header {
+  background-image: linear-gradient(to right, #000000, #1c1c1c);
+  height: 70px;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 2px solid #ff4500;
+
+  // icio Barra supperior de navegação
+
+  // Logo
+  #logo a {
+    text-decoration: none;
+    color: #ff4500;
+  }
+
+  #logo a p {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 19px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #logo a:hover {
+    color: #fff;
+    font-size: 23px;
+  }
+
+  #logo p:hover {
+    font-size: 24px;
+  }
+
+  ul li {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+  }
+}
+
+
+/* Inicio Barra supperior de navegação*/
+/*Logo*/
+#logo a {
+  text-decoration: none;
+  color: #ff4500;
+}
+#logo a p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 19px;
+  font-size: 22px;
+  font-weight: bold;
+}
+#logo a:hover {
+  color: #fff;
+  font-size: 23px;
+}
+#logo p:hover {
+  font-size: 24px;
+}
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+main {
+  display: flex;
+}
+header {
+  background-image: linear-gradient(to right, #000000, #1c1c1c);
+  height: 70px;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 2px solid #ff4500;
+}
+main section,
+#sobre-mim {
+}
+body .leitores-tela {
+  display: none;
+}
+#barra-navegacao {
+  display: flex;
+  justify-content: space-between;
+}
+#barra-navegacao ul li {
+  display: inline;
+  margin-right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#barra-navegacao ul li a {
+  color: #fff;
+  margin: 20px;
+  position: relative;
+}
+#barra-navegacao ul li a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #ff4500;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+#barra-navegacao ul li a:hover::after {
+  width: 100%;
+}
+#barra-navegacao ul li a:hover {
+  color: #e6e6fa;
+}
+#btn-menu {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #caixa h1 {
+    font-size: 22px;
+  }
+
+  #caixa h2 {
+    font-size: 22px;
+  }
+
+  #caixa .animacao {
+    font-size: 30px;
+  }
+
+  #aprensentacao #foto img {
+    max-height: 250px;
+  }
+
+  .projetos-estilo {
+    width: 250px;
+  }
+
+  .projetos-estilo p {
+    max-width: 250px;
+    font-size: 15px;
+  }
+
+  .projetos h6 {
+    max-width: 250px;
+  }
+
+  .projetos-img img {
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .projetos-estilo button {
+    max-width: 80px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  #barra-navegacao {
+    justify-content: space-around;
+  }
+
+  #caixa h1 {
+    font-size: 20px;
+  }
+
+  #caixa h2 {
+    font-size: 20px;
+  }
+
+  #caixa .animacao {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #aprensentacao #foto img {
+    max-height: 200px;
+  }
+
+  .projetos-estilo {
+    width: 220px;
+  }
+
+  .projetos-estilo p {
+    max-width: 220px;
+    font-size: 13px;
+  }
+
+  .projetos h6 {
+    max-width: 220px;
+    font-size: 13px;
+  }
+
+  .projetos-img img {
+    max-width: 220px;
+    max-height: 200px;
+  }
+
+  .projetos-estilo button {
+    max-width: 80px;
+    font-size: 12px;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 0px;
+    top: 70px;
+    right: 0px;
+    background: black;
+    z-index: 100;
+    padding: 20px;
+    transition: 0.5s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    border-bottom: 2px solid orangered;
+    border-left: 2px solid orangered;
+    border-right: 2px solid orangered;
+    opacity: 0.8;
+    height: 140px;
+    visibility: visible;
+    margin-right: 100px;
+  }
+
+  #btn-menu {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 8px;
+    align-items: center;
+    color: #fff;
+	margin-right: 20px;
+  }
+
+  #hamburguer {
+    display: block;
+    width: 20px;
+    border-top: 2px solid;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin-top: 5px;
+    background: currentColor; /*funciona puxando a cor do #hamburguer sem eu precisar mudar tbm o after e o before */
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(135deg);
+    top: -7px;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(-135deg);
+  }
+
+  #habilidades .hard-skills {
+    width: 100%;
+    height: 110px;
+  }
+
+  #habilidades .hard-skills i {
+    font-size: 60px;
+    width: 100%;
+  }
+
+  #quebra-ts {
+    display: none;
+  }
+}
+
+@media (max-width: 490px) {
+  #barra-navegacao {
+    justify-content: space-evenly;
+  }
+
+  #nav.active #menu {
+    margin-right: 50px;
+  }
+
+  #caixa h1 {
+    font-size: 15px;
+  }
+
+  #caixa h2 {
+    font-size: 15px;
+  }
+
+  #caixa .animacao {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  #aprensentacao #foto img {
+    max-height: 170px;
+    max-width: 100px;
+  }
+
+  .projetos {
+    flex-direction: column;
+  }
+
+  .projetos .titulo {
+    font-size: 18px;
+  }
+
+  .projetos-estilo {
+    width: 100%;
+  }
+
+  .projetos-estilo p {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .projetos h6 {
+    max-width: 100%;
+  }
+
+  .projetos-img img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .projetos-estilo button {
+    max-width: 80px;
+    font-size: 12px;
+  }
+
+  .experiencia h5 {
+    font-size: 16px;
+  }
+
+  .experiencia .data {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 410px) {
+  #caixa h1 {
+    font-size: 12px;
+  }
+
+  #caixa h2 {
+    font-size: 12px;
+  }
+
+  #caixa .animacao {
+    font-size: 15px;
+  }
+
+  #aprensentacao #foto img {
+    max-height: 150px;
+    max-width: 80px;
+  }
+
+  .projetos-estilo {
+    width: 270px;
+  }
+
+  .projetos-estilo p {
+    max-width: 270px;
+    font-size: 13px;
+  }
+
+  .projetos h6 {
+    max-width: 270px;
+    font-size: 13px;
+  }
+
+  .projetos-img img {
+    max-width: 270px;
+    max-height: 200px;
+  }
+
+  .projetos-estilo button {
+    max-width: 80px;
+    font-size: 11px;
+  }
+
+  .hard-skills {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  .experiencia {
+	padding: 20px;
+  }
+
+
+  .experiencia h5 {
+    font-size: 13px;
+  }
+
+  .experiencia .data {
+    font-size: 10px;
+  }
+
+  #rodape #nome {
+    text-align: center;
+  }
+
+  .logo-rodape {
+    display: none;
+  }
+}
+
+/* Fim Barra supperior de navegação*/
+
+#foto_fundo {
+  width: 100vw;
+  // background: url(imagens/plano_fundo.jpeg) no-repeat;
+  background-size: cover;
+}
+
+#aprensentacao {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 550px;
+  color: #fff;
+  align-items: center;
+}
+#caixa {
+  background-color: #000000;
+  box-shadow: 1px 3px 3px 2px #ff4500;
+  opacity: 0.85;
+  left: 0;
+  padding: 20px;
+  border-radius: 10px 12px 10px 25px;
+}
+#aprensentacao #foto img {
+  height: 300px;
+  right: 0;
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px 2px #000;
+}
+#sobre-mim .titulo {
+  margin-bottom: 20px;
+}
+#sobre-mim .container {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18.5px;
+}
+.titulo {
+  color: #ff4500;
+  text-transform: uppercase;
+  font-weight: bold italic;
+  font-size: 25px;
+}
+/*Projetos*/
+#projetos .container {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.projetos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+.projetos-img img {
+  width: 380px;
+  height: 220px;
+}
+.projetos-estilo {
+  background: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  height: 100%;
+  border-radius: 3px 3px 8px 8px;
+  box-shadow: 0px 4px 0px #c0c0c0;
+}
+.projetos-estilo p {
+  width: 380px;
+  padding-left: 10px;
+  padding: 10px;
+}
+.projetos-estilo .p-tecnologias {
+  color: #8b4513;
+}
+.projetos-estilo button {
+  background: darkorange;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.projetos-estilo button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 2px solid orangered;
+}
+
+.projetos-estilo button:hover {
+  background-color: darkblue;
+  letter-spacing: 1.5px;
+}
+
+.projetos h6 {
+  width: 380px;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  background-image: linear-gradient(to right, #000000, #1c1c1c);
+  color: #fff;
+  text-transform: uppercase;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  letter-spacing: 1px;
+}
+/*Experiência*/
+.exp {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.experiencia {
+  width: 100%px;
+  margin-top: 48px;
+  justify-self: center;
+  background: #fff;
+  box-shadow: 0px 8px 0px lightgrey;
+  border-radius: 16px;
+  padding: 48px;
+}
+.experiencia ol {
+  list-style: none;
+  counter-reset: cont-exp;
+  margin: 0px;
+  padding: 0px 0px 0px 24px;
+}
+.experiencia ol li {
+  counter-increment: cont-exp;
+  border-left: 1px solid lightgrey;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "before conteudo";
+  align-items: start;
+}
+.experiencia ol li::before {
+  content: "0" counter(cont-exp);
+  font-weight: bold;
+  background-color: tomato;
+  border-radius: 50%;
+  padding: 16px;
+  color: #fff;
+  margin-left: -25px;
+  margin-right: 32px;
+  grid-area: before;
+}
+.experiencia .exp-empresa {
+  border-radius: 8px;
+  border: 1px solid tomato;
+  box-shadow: 0px 4px 0px darksalmon;
+  grid-area: conteudo;
+}
+.experiencia .exp-funcao {
+  border-bottom: 1px solid tomato;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: lightsalmon;
+  padding: 16px;
+}
+.exp-funcao {
+  display: flex;
+  justify-content: space-between;
+}
+.experiencia .exp-descricao {
+  padding: 16px;
+}
+.funcao {
+  color: #000080;
+}
+
+.ordem {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.data {
+  font-weight: bold;
+  text-align: center;
+  color: #1c1c1c;
+}
+/* Habilidades */
+.hab {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Layout responsivo */
+#habilidades {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+  justify-content: center; /* Centraliza os itens */
+  gap: 20px; /* Espaço entre os elementos */
+  width: 100%;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  scroll-margin-top: 70px;
+}
+
+/* Cards das habilidades */
+.hard-skills {
+  background-color: #fff;
+  padding-top: 10px;
+  width: 130px; /* Reduzi um pouco para melhor ajuste */
+  height: 160px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícones */
+.hard-skills i {
+  font-size: 80px; /* Reduzi para caber melhor em telas menores */
+  margin-top: 10px;
+}
+/*Rodapé*/
+#rodape {
+  width: 100%;
+  height: 160px;
+  background: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#rodape2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+#logo-rodape a {
+  text-decoration: none;
+  color: #ff4500;
+  text-align: center;
+}
+#rodape2 ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+#rodape2 ul li i {
+  font-size: 25px;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+#rodape2 img {
+  margin-top: 10px;
+}
+.email {
+  color: #fff;
+  padding-top: 5px;
+  text-align: center;
+  margin-left: 32.5px;
+  white-space: nowrap;
+}
+#nome {
+  display: flex;
+  justify-content: center;
+  line-height: 10px;
+  color: #fff;
+}
+.i-github:hover {
+  background: #363636;
+}
+.i-linkedin:hover {
+  background: #0000ff;
+}
+.i-instagram:hover {
+  background-image: linear-gradient(to bottom, #4b0082, #ff1493, #ff4500);
+}
+.i-whatsapp:hover {
+  background: #25d366;
+}
+
