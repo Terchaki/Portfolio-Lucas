@@ -1,7 +1,19 @@
+// Bootstrap
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
 }
 
 html {
@@ -13,10 +25,10 @@ html {
 ::-webkit-scrollbar {
   background: #363636;
   width: 10px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: orangered;
-  height: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
 }

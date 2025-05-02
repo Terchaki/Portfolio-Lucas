@@ -1,0 +1,71 @@
+.baseboard {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+
+  .baseboard2 {
+    display: flex;
+    justify-content: space-around;
+
+    .logo-baseboard a {
+      text-decoration: none;
+      color: #ff4500;
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      margin-bottom: 10px;
+      padding-left: 0px;
+    }
+
+    ul li i {
+      font-size: 25px;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      border: 1px solid #fff;
+    }
+  }
+
+  .email {
+    color: #fff;
+    padding-top: 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  #nome {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .i-github:hover {
+    background: #363636;
+  }
+
+  .i-linkedin:hover {
+    background: #0000ff;
+  }
+
+  .i-instagram:hover {
+    background-image: linear-gradient(to bottom, #4b0082, #ff1493, #ff4500);
+  }
+
+  .i-whatsapp:hover {
+    background: #25d366;
+  }
+
+}
+
+@media (max-width: 410px) {
+  .baseboard #nome {
+    text-align: center;
+  }
+
+}
