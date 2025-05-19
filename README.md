@@ -1,27 +1,34 @@
-# PortfolioLucas
+# 🏆 Portfólio - Lucas Henrique
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+<div style="text-align: center">
+  <img src="./src/assets/images/logo.png" alt="Logo Meetime" width="200">
+</div>
 
-## Development server
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Aplicação em Desenvolvimento com o uso de Novas tecnologias e Funcionalidades
 
-## Code scaffolding
+<div>
+  <img src="https://readme-typing-svg.herokuapp.com/?color=ff4500&center=true&vCenter=true&lines=Em+Desenvolvimento...+</>++🧠;" />
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br>
 
-## Build
+Esta é a V2 do meu portfólio pessoal, criado com <strong>HTML, CSS e JavaScript e Angular</strong>, com o objetivo de apresentar:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 👨‍💼 Minha trajetória e experiência na área de desenvolvimento
+- 🚀 Habilidades técnicas e tecnologias que domino
+- 🛠️ Projetos desenvolvidos
+- 📞 Meios de contato para oportunidades
 
-## Running unit tests
+A proposta do portfólio é ser leve, responsivo e de fácil navegação, proporcionando uma ótima experiência ao visitante.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+<br><hr><br>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## 🧑‍💻 Autor
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* **Nome:** Lucas Henrique
+* **E-mail:** lucas.dev.contato@outlook.com
+* [LinkedIn](https://www.linkedin.com/in/lucas-henrique-sousa-mendes/)
