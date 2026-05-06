@@ -1,24 +1,33 @@
 <header>
   <nav class="container">
-    <div id="barra-navegacao">
-      <div id="logo">
-        <a href="">
-          <p>.Dev</p>
-          <p>&lt;/Lucas&gt;</p>
+    <div class="navigation">
+      <div class="brand">
+        <a href="#inicio">
+          <span class="brand__dot">.Dev</span>
+          <span class="brand__name">&lt;/Lucas&gt;</span>
         </a>
-      </div><div id="nav" [class.active]="menuAtivo">
-        <button (click)="alternarMenu($event)"
-          (touchstart)="alternarMenu($event)" id="btn-menu">
-          MENU<span id="hamburguer"></span>
-        </button>
-        <ul id="menu">
-          <li><a href="#sobre-mim">Sobre mim</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-        </ul>
       </div>
 
+      <div class="menu-wrap" [class.active]="menuAtivo">
+
+        <button (click)="alternarMenu($event)" (touchstart)="alternarMenu($event)" id="btn-menu"
+          aria-label="Abrir menu">
+          MENU <span id="hamburguer"></span>
+        </button>
+
+        <ul id="menu">
+          <li><a href="#sobre-mim" (click)="fecharMenu()">Sobre mim</a></li>
+          <li><a href="#habilidades" (click)="fecharMenu()">Habilidades</a></li>
+          <li><a href="#projetos" (click)="fecharMenu()">Projetos</a></li>
+          <li><a href="#experiencia" (click)="fecharMenu()">Experiência</a></li>
+          <li><a href="#contato" (click)="fecharMenu()">Contato</a></li>
+        </ul>
+
+        <button type="button" class="theme-toggle" (click)="alternarTema()"
+          [attr.aria-label]="temaAtual === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'">
+          <i [class]="temaAtual === 'dark' ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </button>
+      </div>
     </div>
   </nav>
 </header>

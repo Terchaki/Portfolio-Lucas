@@ -1,10 +1,76 @@
 // Bootstrap
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+:root {
+  --bg-primary: #0b1017;
+  --bg-secondary: #121923;
+  --text-primary: #ecf2f8;
+  --text-secondary: #bac6d3;
+  --text-muted: #8e99a7;
+  --brand-primary: #ff7d29;
+  --brand-primary-strong: #ff934d;
+  --brand-secondary: #00bcd4;
+  --border-color: rgba(255, 255, 255, 0.16);
+  --surface-soft: rgba(255, 255, 255, 0.03);
+  --surface-muted: rgba(255, 255, 255, 0.02);
+  --surface-strong: rgba(255, 255, 255, 0.05);
+  --surface-accent: rgba(255, 125, 41, 0.08);
+  --surface-accent-strong: rgba(255, 125, 41, 0.12);
+  --surface-cyan: rgba(0, 188, 212, 0.07);
+  --surface-cyan-strong: rgba(0, 188, 212, 0.18);
+  --header-bg: rgba(11, 16, 23, 0.86);
+  --menu-bg: rgba(10, 14, 19, 0.96);
+  --footer-bg: linear-gradient(180deg, #06090d 0%, #0a0d12 100%);
+  --section-accent-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 75%);
+  --hero-frame-bg: linear-gradient(135deg, rgba(255, 125, 41, 0.12), rgba(0, 188, 212, 0.08));
+  --hero-frame-shadow: 0 0 48px rgba(255, 125, 41, 0.22);
+  --button-primary-text: #0f0f11;
+  --scroll-btn-text: #0f1012;
+  --highlight-soft: #ffd2b4;
+  --timeline-role: #ffe7d6;
+  --scrollbar-track: #1d232b;
+  --font-body: 'Sora', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+body[data-theme='light'] {
+  --bg-primary: #f7f4ef;
+  --bg-secondary: #ffffff;
+  --text-primary: #19232d;
+  --text-secondary: #4f5f6f;
+  --text-muted: #6f7c8a;
+  --border-color: rgba(25, 35, 45, 0.12);
+  --surface-soft: rgba(255, 255, 255, 0.72);
+  --surface-muted: rgba(255, 255, 255, 0.52);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --surface-accent: rgba(255, 125, 41, 0.12);
+  --surface-accent-strong: rgba(255, 125, 41, 0.18);
+  --surface-cyan: rgba(0, 188, 212, 0.11);
+  --surface-cyan-strong: rgba(0, 188, 212, 0.18);
+  --header-bg: rgba(247, 244, 239, 0.88);
+  --menu-bg: rgba(255, 255, 255, 0.97);
+  --footer-bg: linear-gradient(180deg, #f1ede6 0%, #ebe5db 100%);
+  --section-accent-bg: linear-gradient(180deg, rgba(255, 125, 41, 0.06), transparent 75%);
+  --hero-frame-bg: linear-gradient(135deg, rgba(255, 125, 41, 0.14), rgba(0, 188, 212, 0.12));
+  --hero-frame-shadow: 0 0 32px rgba(255, 125, 41, 0.16);
+  --button-primary-text: #ffffff;
+  --scroll-btn-text: #ffffff;
+  --highlight-soft: #98501d;
+  --timeline-role: #ab5d2a;
+  --scrollbar-track: #ddd6cb;
+}
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 a {
@@ -12,23 +78,21 @@ a {
 }
 
 ul {
-  text-decoration: none;
   list-style: none;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-  /* Rolagem suave considerando a altura do header*/
+  scroll-padding-top: 100px;
 }
 
 ::-webkit-scrollbar {
-  background: #363636;
+  background: var(--scrollbar-track);
   width: 10px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: orangered;
+  background: var(--brand-primary);
   border-radius: 3px;
 }
