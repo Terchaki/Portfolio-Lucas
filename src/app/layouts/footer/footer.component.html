@@ -1,32 +1,78 @@
 <footer>
-  <div class="baseboard">
+  <div class="footer__top">
     <div class="container">
-      <div class="baseboard2">
-        <div class="logo-baseboard">
-          <img src="./../../../assets/images/logo.png" alt="Logo" width="100px">
+      <div class="footer-content">
+
+        <div class="d-none d-md-block">
+          <ng-container *ngTemplateOutlet="brandTemplate"></ng-container>
         </div>
-        <div>
+
+        <div class="footer__section footer__links">
+          <h4>Navegação</h4>
           <ul>
-            <li><a href="https://github.com/Terchaki" target="_blank"><i
-                  class="fab fa-github i-github"></i>
-              </a></li>
-            <li><a
-                href="https://www.linkedin.com/in/lucas-henrique-sousa-mendes/"
-                target="_blank">
-                <i class="fab fa-linkedin-in i-linkedin"></i>
-              </a></li>
-            <!--<li><a href=""><i class="fab fa-instagram i-instagram"></i><div class="leitores-tela">Instagram</div></a></li>-->
-            <li><a href="https://wa.me/5564992048816" target="_blank"><i
-                  class="fab fa-whatsapp i-whatsapp"></i>
-              </a></li>
+            <li><a href="#sobre-mim">Sobre mim</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
           </ul>
-          <span class="email"><i class="fas fa-envelope"></i>
-            lucas.dev.contato&#64;outlook.com
-          </span>
+        </div>
+
+        <div class="footer__section footer__contact">
+          <h4>Conectar</h4>
+          <div class="contact-items">
+            <a href="https://wa.me/5564992048816" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:lucas.dev.contato@outlook.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>lucas.dev.contato&#64;outlook.com</span>
+            </a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://github.com/Terchaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-henrique-sousa-mendes/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5564992048816" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="d-md-none footer__brand-mobile">
+          <ng-container *ngTemplateOutlet="brandTemplate"></ng-container>
         </div>
       </div>
     </div>
-    <hr class="m-0">
-    <p id="nome">© 2025 - Desenvolvido por Lucas Henrique</p>
+  </div>
+
+  <ng-template #brandTemplate>
+    <div class="footer__section footer__brand">
+      <div class="brand-info">
+        <div class="brand-icon">
+          <a href="#inicio">
+            <span class="brand-dot">.Dev</span>
+            <span class="brand-name">&lt;/Lucas&gt;</span>
+          </a>
+        </div>
+        <p class="brand-tagline">Desenvolvedor Front-end Angular</p>
+        <p class="brand-description">
+          Transformando ideias em produtos web escaláveis e modernos.
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; {{ currentYear }} - Desenvolvido por Lucas Henrique</p>
+    </div>
   </div>
 </footer>
