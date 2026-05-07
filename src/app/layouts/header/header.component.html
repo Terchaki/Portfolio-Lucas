@@ -11,20 +11,25 @@
       <div class="menu-wrap" [class.active]="menuAtivo">
 
         <button (click)="alternarMenu($event)" (touchstart)="alternarMenu($event)" id="btn-menu"
-          aria-label="Abrir menu">
+          [attr.aria-label]="t.menuOpen">
           MENU <span id="hamburguer"></span>
         </button>
 
         <ul id="menu">
-          <li><a href="#sobre-mim" (click)="fecharMenu()">Sobre mim</a></li>
-          <li><a href="#habilidades" (click)="fecharMenu()">Habilidades</a></li>
-          <li><a href="#projetos" (click)="fecharMenu()">Projetos</a></li>
-          <li><a href="#experiencia" (click)="fecharMenu()">Experiência</a></li>
-          <li><a href="#contato" (click)="fecharMenu()">Contato</a></li>
+          <li><a href="#sobre-mim" (click)="fecharMenu()">{{ t.about }}</a></li>
+          <li><a href="#habilidades" (click)="fecharMenu()">{{ t.skills }}</a></li>
+          <li><a href="#projetos" (click)="fecharMenu()">{{ t.projects }}</a></li>
+          <li><a href="#experiencia" (click)="fecharMenu()">{{ t.experience }}</a></li>
+          <li><a href="#contato" (click)="fecharMenu()">{{ t.contact }}</a></li>
         </ul>
 
+        <button type="button" class="theme-toggle" (click)="alternarIdioma()"
+          [attr.aria-label]="t.switchLanguageAria">
+          {{ t.languageButton }}
+        </button>
+
         <button type="button" class="theme-toggle" (click)="alternarTema()"
-          [attr.aria-label]="temaAtual === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'">
+          [attr.aria-label]="temaAtual === 'dark' ? t.themeLightAria : t.themeDarkAria">
           <i [class]="temaAtual === 'dark' ? 'fas fa-sun' : 'fas fa-moon'"></i>
         </button>
       </div>

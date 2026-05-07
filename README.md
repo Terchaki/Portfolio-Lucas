@@ -35,7 +35,7 @@ O design é responsivo, acessível e otimizado para performance, proporcionando 
 
 Aplicação em produção:
 
-> **URL:** [Adicionar URL de deploy aqui](#) <!-- Substitua # pela sua URL de deploy -->
+> **URL:** [https://portfolio-lucas-henrique.netlify.app/](https://portfolio-lucas-henrique.netlify.app/)
 
 A aplicação está hospedada no **GitHub Pages** e é atualizada automaticamente a cada push na branch `main`.
 

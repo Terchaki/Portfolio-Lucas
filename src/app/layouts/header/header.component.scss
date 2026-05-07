@@ -109,8 +109,9 @@ nav {
 
 @media (max-width: 900px) {
   #btn-menu {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -118,23 +119,36 @@ nav {
     background: var(--surface-strong);
     color: var(--text-primary);
     font-weight: 600;
+    line-height: 1;
+    min-height: 36px;
   }
 
   #hamburguer {
+    position: relative;
+    display: block;
     width: 20px;
-    border-top: 2px solid currentColor;
+    height: 12px;
   }
 
   #hamburguer::before,
   #hamburguer::after {
     content: '';
-    display: block;
+    position: absolute;
+    left: 0;
     width: 20px;
     height: 2px;
     background: currentColor;
-    margin-top: 5px;
     transition: 0.25s ease;
-    position: relative;
+    transform-origin: center;
+  }
+
+  #hamburguer::before {
+    top: 0;
+    box-shadow: 0 5px 0 currentColor;
+  }
+
+  #hamburguer::after {
+    top: 10px;
   }
 
   #menu {
@@ -179,17 +193,14 @@ nav {
     transform: translateY(0);
   }
 
-  .menu-wrap.active #hamburguer {
-    border-top-color: transparent;
-  }
-
   .menu-wrap.active #hamburguer::before {
-    transform: rotate(135deg);
-    top: 7px;
+    box-shadow: none;
+    transform: rotate(45deg);
+    top: 5px;
   }
 
   .menu-wrap.active #hamburguer::after {
-    transform: rotate(-135deg);
-    top: 0;
+    transform: rotate(-45deg);
+    top: 5px;
   }
 }
