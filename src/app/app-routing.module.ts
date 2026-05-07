@@ -4,6 +4,7 @@ import { LayoutComponent } from './layouts/layout/layout.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent },
+  { path: 'en', component: LayoutComponent },
   { path: '**', redirectTo: '' },
 ];
 

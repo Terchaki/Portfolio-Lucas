@@ -8,17 +8,17 @@
         </div>
 
         <div class="footer__section footer__links">
-          <h4>Navegação</h4>
+          <h4>{{ t.navigation }}</h4>
           <ul>
-            <li><a href="#sobre-mim">Sobre mim</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#sobre-mim">{{ t.about }}</a></li>
+            <li><a href="#habilidades">{{ t.skills }}</a></li>
+            <li><a href="#projetos">{{ t.projects }}</a></li>
+            <li><a href="#experiencia">{{ t.experience }}</a></li>
           </ul>
         </div>
 
         <div class="footer__section footer__contact">
-          <h4>Conectar</h4>
+          <h4>{{ t.connect }}</h4>
           <div class="contact-items">
             <a href="https://wa.me/5564992048816" target="_blank" rel="noopener noreferrer" class="contact-item">
               <i class="fab fa-whatsapp"></i>
@@ -62,9 +62,9 @@
             <span class="brand-name">&lt;/Lucas&gt;</span>
           </a>
         </div>
-        <p class="brand-tagline">Desenvolvedor Front-end Angular</p>
+        <p class="brand-tagline">{{ t.tagline }}</p>
         <p class="brand-description">
-          Transformando ideias em produtos web escaláveis e modernos.
+          {{ t.brandDescription }}
         </p>
       </div>
     </div>
@@ -72,7 +72,7 @@
 
   <div class="footer__bottom">
     <div class="container">
-      <p>&copy; {{ currentYear }} - Desenvolvido por Lucas Henrique</p>
+      <p>&copy; {{ currentYear }} - {{ t.developedBy }} Lucas Henrique</p>
     </div>
   </div>
 </footer>

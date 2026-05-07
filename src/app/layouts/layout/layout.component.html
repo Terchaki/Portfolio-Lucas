@@ -3,30 +3,30 @@
   <section id="inicio" class="hero">
     <div class="hero__content container">
       <div class="hero__text">
-        <p class="hero__kicker">Portfólio</p>
+        <p class="hero__kicker">{{ text.heroKicker }}</p>
 
         <div class="hero__photo d-md-none py-5">
           <div class="hero__photo-frame">
-            <img [src]="profile.photo" alt="Lucas Henrique — Desenvolvedor Front-end Angular" />
+            <img [src]="profileView.photo" alt="Lucas Henrique — Desenvolvedor Front-end Angular" />
           </div>
         </div>
 
         <h1>
-          {{ profile.firstName }}<br />
+          {{ profileView.firstName }}<br />
           <span class="typing-wrapper">{{ displayedRole }}<span class="typing-cursor"
               [class.hidden]="isTypingDone"></span></span>
         </h1>
-        <p class="hero__subtitle">{{ profile.headline }}</p>
+        <p class="hero__subtitle">{{ profileView.headline }}</p>
 
         <div class="hero__highlights">
-          <span><i class="fas fa-location-dot"></i> {{ profile.city }}</span>
-          <span><i class="fas fa-briefcase"></i> +3 anos em produtos web</span>
-          <span><i class="fas fa-layer-group"></i> Angular como stack principal</span>
+          <span><i class="fas fa-location-dot"></i> {{ profileView.city }}</span>
+          <span><i class="fas fa-briefcase"></i> {{ text.heroHighlightYears }}</span>
+          <span><i class="fas fa-layer-group"></i> {{ text.heroHighlightStack }}</span>
         </div>
 
         <div class="hero__actions">
-          <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
-          <a href="#contato" class="btn btn--ghost">Falar Comigo</a>
+          <a href="#projetos" class="btn btn--primary">{{ text.ctaProjects }}</a>
+          <a href="#contato" class="btn btn--ghost">{{ text.ctaContact }}</a>
           <!-- <a [href]="profile.cvUrl" download class="btn btn--cv">
             <i class="fas fa-download"></i> Baixar CV
           </a> -->
@@ -35,7 +35,7 @@
 
       <div class="hero__photo d-none d-md-block">
         <div class="hero__photo-frame">
-          <img [src]="profile.photo" alt="Lucas Henrique — Desenvolvedor Front-end Angular" />
+          <img [src]="profileView.photo" alt="Lucas Henrique — Desenvolvedor Front-end Angular" />
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
   <section class="stats-section scroll-reveal">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item" *ngFor="let stat of stats; let i = index">
+        <div class="stat-item" *ngFor="let stat of statsView; let i = index">
           <p class="stat-value">{{ animatedStats[i].current }}{{ stat.suffix }}</p>
           <p class="stat-label">{{ stat.label }}</p>
         </div>
@@ -54,35 +54,17 @@
 
   <section id="sobre-mim" class="section container scroll-reveal">
     <div class="section__header">
-      <p class="section__label">Sobre mim</p>
-      <h2>Perfil profissional</h2>
+      <p class="section__label">{{ text.aboutLabel }}</p>
+      <h2>{{ text.aboutTitle }}</h2>
     </div>
-    <p class="about__text">
-      Sou desenvolvedor Front-end com foco em Angular e experiência na construção de aplicações
-      corporativas com alto nível de regra de negócio. Gosto de transformar requisitos complexos em
-      interfaces intuitivas, performáticas e sustentáveis no longo prazo.
-    </p>
-    <p class="about__text">
-      Sou formado em Análise e Desenvolvimento de Sistemas, o que fortalece minha base para construir
-      soluções consistentes, com visão de produto e boas práticas de engenharia.
-    </p>
-    <p class="about__text">
-      Tenho experiência em times ágeis, atuando desde a concepção técnica até o deploy. Sou apaixonado
-      por aprender novas tecnologias e metodologias, e estou sempre buscando evoluir como
-      profissional.
-    </p>
-    <p class="about__text">
-      Fora do código, gosto de viajar, conhecer novas culturas e passar tempo com minha família e
-      amigos. Acredito que um bom equilíbrio entre vida pessoal e profissional é essencial para
-      manter a criatividade e a motivação no trabalho.
-    </p>
+    <p class="about__text" *ngFor="let paragraph of text.aboutParagraphs">{{ paragraph }}</p>
   </section>
 
   <section id="habilidades" class="section section--accent scroll-reveal">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">Habilidades</p>
-        <h2>Stack e ferramentas</h2>
+        <p class="section__label">{{ text.skillsLabel }}</p>
+        <h2>{{ text.skillsTitle }}</h2>
       </div>
 
       <div class="skills-grid">
@@ -109,15 +91,15 @@
       <button class="skill-toggle d-md-none" *ngIf="skills.length > 3" (click)="toggleSkills()"
         [attr.aria-expanded]="showAllSkills">
         <i [class]="showAllSkills ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
-        {{ showAllSkills ? 'Ver menos' : 'Ver todas (' + (skills.length - 3) + ')' }}
+        {{ showAllSkills ? text.skillsShowLess : text.skillsShowAllPrefix + ' (' + (skills.length - 3) + ')' }}
       </button>
     </div>
   </section>
 
   <section id="empresas" class="section container scroll-reveal">
     <div class="section__header">
-      <p class="section__label">Experiência</p>
-      <h2>Trajetória corporativa onde atuei</h2>
+      <p class="section__label">{{ text.companiesLabel }}</p>
+      <h2>{{ text.companiesTitle }}</h2>
     </div>
 
     <div class="companies-grid">
@@ -131,26 +113,26 @@
 
   <section id="projetos" class="section container scroll-reveal">
     <div class="section__header">
-      <p class="section__label">Projetos</p>
-      <h2>Principais Projetos</h2>
+      <p class="section__label">{{ text.projectsLabel }}</p>
+      <h2>{{ text.projectsTitle }}</h2>
     </div>
 
     <div class="projects-grid">
-      <article class="project-card" *ngFor="let project of projects">
+      <article class="project-card" *ngFor="let project of projectsView">
         <ul class="project-card__content">
           <li class="project-card__body">
             <h3>{{ project.title }}</h3>
             <p class="project-card__description">{{ project.description }}</p>
-            <p class="project-card__stack"><strong>Tecnologias:</strong> {{ project.technologies }}</p>
+            <p class="project-card__stack"><strong>{{ text.projectsTechLabel }}</strong> {{ project.technologies }}</p>
           </li>
           <li class="project-card__footer">
             <p *ngIf="project.highlight" class="project-card__highlight">{{ project.highlight }}</p>
             <div class="project-card__links">
               <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
-                Projeto
+                {{ text.projectLinkLive }}
               </a>
               <a *ngIf="project.codeUrl" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">
-                Código
+                {{ text.projectLinkCode }}
               </a>
             </div>
           </li>
@@ -162,14 +144,14 @@
   <section id="experiencia" class="section section--timeline scroll-reveal">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">Experiência</p>
-        <h2>Minha jornada profissional</h2>
+        <p class="section__label">{{ text.experienceLabel }}</p>
+        <h2>{{ text.experienceTitle }}</h2>
       </div>
 
       <div class="timeline">
-        <article class="timeline-item" *ngFor="let item of experiences">
+        <article class="timeline-item" *ngFor="let item of experiencesView">
           <p class="timeline-item__period">{{ item.period }} <span *ngIf="item.isActual"> - <i
-                class="fas fa-circle text-success"></i> Atualmente</span></p>
+                class="fas fa-circle text-success"></i> {{ text.experienceCurrent }}</span></p>
           <h3>{{ item.company }}</h3>
           <p class="timeline-item__role">{{ item.role }}</p>
           <p>{{ item.description }}</p>
@@ -181,24 +163,24 @@
   <section id="certificacoes" class="section section--borders scroll-reveal">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">Certificações</p>
-        <h2>Cursos e formações</h2>
+        <p class="section__label">{{ text.certLabel }}</p>
+        <h2>{{ text.certTitle }}</h2>
       </div>
 
       <article class="cert-card cert-card--featured">
         <i class="fas fa-award cert-card__icon"></i>
         <div class="cert-card__info">
-          <h3>{{ featuredCertification.title }}</h3>
-          <p>{{ featuredCertification.issuer }} · {{ featuredCertification.status }}</p>
-          <span class="cert-card__note">{{ featuredCertification.note }}</span>
+          <h3>{{ featuredCertificationView.title }}</h3>
+          <p>{{ featuredCertificationView.issuer }} · {{ featuredCertificationView.status }}</p>
+          <span class="cert-card__note">{{ featuredCertificationView.note }}</span>
         </div>
         <div class="cert-card__image">
-          <img [src]="featuredCertification.image" [alt]="featuredCertification.title" />
+          <img [src]="featuredCertificationView.image" [alt]="featuredCertificationView.title" />
         </div>
       </article>
 
       <div class="certs-grid">
-        <article class="cert-card" *ngFor="let cert of certifications">
+        <article class="cert-card" *ngFor="let cert of certificationsView">
           <i class="fas fa-certificate cert-card__icon"></i>
           <div class="cert-card__info">
             <h3>{{ cert.title }}</h3>
@@ -211,22 +193,19 @@
 
   <section id="contato" class="section container section--contact">
     <div>
-      <p class="section__label">Contato</p>
-      <h2>Vamos conversar sobre sua próxima iniciativa?</h2>
-      <p>
-        Estou disponível para oportunidades em desenvolvimento front-end Angular.
-        Se fizer sentido para sua equipe, será um prazer trocar uma ideia.
-      </p>
+      <p class="section__label">{{ text.contactLabel }}</p>
+      <h2>{{ text.contactTitle }}</h2>
+      <p>{{ text.contactDescription }}</p>
     </div>
 
-    <a class="contact-mail" href="mailto:{{ profile.email }}">
+    <a class="contact-mail" href="mailto:{{ profileView.email }}">
       <i class="fas fa-envelope"></i>
-      {{ profile.email }}
+      {{ profileView.email }}
     </a>
   </section>
 </main>
 <app-footer></app-footer>
 
-<button class="scroll-top-btn" [class.visible]="showScrollTop" (click)="scrollToTop()" aria-label="Voltar ao topo">
+<button class="scroll-top-btn" [class.visible]="showScrollTop" (click)="scrollToTop()" [attr.aria-label]="text.scrollTopAria">
   <i class="fas fa-chevron-up"></i>
 </button>
